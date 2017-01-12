@@ -12,8 +12,8 @@ sudo apt-get install docker-engine
 sudo usermod -aG docker humax
 
 ### NOPASSWD SETTING
+sudo sed -i '26a\\%sudo\tALL=(ALL:ALL) NOPASSWD:ALL' /etc/sudoers
 sudo sed -i '26d' /etc/sudoers
-sudo sed -i '25a\\%sudo\tALL=(ALL:ALL) NOPASSWD:ALL' /etc/sudoers
 
 ### CONFIGURE DOCKER DAEMON
 sudo mkdir -p /etc/systemd/system/docker.service.d
