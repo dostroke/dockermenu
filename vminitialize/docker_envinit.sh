@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### INSTALL PYTHON
-su humax
+#su humax
 sudo apt-get update ; sudo apt-get install -y python
 
 ### INSTALL DOCKER ENGINE
