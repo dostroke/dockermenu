@@ -32,7 +32,7 @@ cd ~/docker
 git clone https://github.com/dostroke/dockermenu.git .
 
 ### SETUP PROFILE
-sudo echo "/home/humax/docker/consolemenu/vminteract.py" >> /etc/profile
+sudo bash -c 'echo "/home/humax/docker/consolemenu/vminteract.py" >> /etc/profile'
 
 ### MAKE OUTPUT DIR
 sudo mkdir /nfsroot
