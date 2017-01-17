@@ -359,7 +359,7 @@ if __name__ == '__main__':
     else:
         docker_prefix = ''
     # load docker repository and get current running info
-    DockerContainers = TDockerContainer.TDockerContainer('http://10.0.218.196:5000', host_ip_address, docker_prefix)
+    DockerContainers = TDockerContainer.TDockerContainer('http://10.0.218.195:5000', host_ip_address, docker_prefix)
     make_container_list()
 
     screen = curses.initscr()
