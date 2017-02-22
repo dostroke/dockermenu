@@ -1,5 +1,7 @@
 #!/bin/bash
 
+### Command by Sangjin Kim(sjkim5@humaxdigital.com)
+
 ### INSTALL PYTHON
 #su humax
 sudo apt-get update ; sudo apt-get install -y python
