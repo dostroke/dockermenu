@@ -18,11 +18,15 @@ RUN apt-get update && \
     e2fsprogs fontconfig gawk libglib2.0-0 libuuid1 python-libxml2 libxml2 libxslt1.1 \
     make net-tools perl libcarp-clan-perl libcarp-always-perl libcarp-assert-perl \
     libdata-dump-perl libdigest-md5-file-perl libpath-class-perl libthread-queue-any-perl \
-    libpopt0 python python-rpm sshpass patch lib32z1 libc6-i386 lib32stdc++6 gawk gcc-4.6 \
+    libpopt0 python python-rpm sshpass patch lib32z1 libc6-i386 lib32stdc++6 gawk gcc \
     diffutils tar bzip2 findutils bc module-init-tools automake autoconf \
     git xmlto diffstat chrpath gcc-avr binutils-avr gdb-avr avr-libc avrdude ntp wget vim tree \
-    expect zip screen subversion subversion-tools openssh-server supervisor cpp-4.6
+    expect zip screen subversion subversion-tools openssh-server supervisor cpp-4.6 sudo \
+    gcc-multilib fakeroot
 
+RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe" && \
+    apt-get update && \
+    apt-get install -y libncurses5-dev:i386
 
 # Oracle JAVA Install
 RUN \
@@ -58,6 +62,9 @@ RUN \
     echo "export LC_ALL=en_US.UTF-8" >> /etc/bash.bashrc \
     && echo "export TERM=xterm" >> /etc/bash.bashrc \
     && echo "source ~/.bashrc" >> /etc/bash.bashrc
+
+RUN mkdir /tftpboot && mkdir /nfsroot && \
+    chmod 777 -R /tftpboot && chmod 777 -R /nfsroot
 
 # Add Initial Run Script
 ADD entry_point.sh /
