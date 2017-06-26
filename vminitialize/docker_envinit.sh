@@ -8,7 +8,6 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 ### INSTALL PYTHON
-#su humax
 sudo apt-get update ; sudo apt-get install -y python
 
 ### INSTALL DOCKER ENGINE / Deprecated from 2017.3.3
@@ -16,7 +15,7 @@ sudo apt-get update ; sudo apt-get install -y python
 #sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' -y
 #sudo apt-get update
 #sudo apt-get install -y docker-engine
-#sudo usermod -aG docker humax
+#sudo usermod -aG docker ${USER} 
 
 ### INSTALL Docker Community Edition / 2017.3.3
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
