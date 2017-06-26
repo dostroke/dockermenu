@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### Command by Sangjin Kim(sjkim5@humaxdigital.com)
+### Command by Sangjin Kim(isgenez@gmail.com)
 ### PATCH VER: v1.1 (2017.2.22)
 
 GREEN='\033[0;32m'

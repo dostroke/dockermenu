@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### Command by Sangjin Kim(sjkim5@humaxdigital.com)
+### Command by Sangjin Kim(isgenez@gmail.com)
 ### THIS COMMAND SHOULD RUN AFTER FINISH docker_envinit.sh
 
 GREEN='\033[0;32m'
